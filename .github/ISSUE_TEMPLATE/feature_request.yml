@@ -1,0 +1,19 @@
+name: Feature request
+description: Suggest an idea or a new light to support
+labels: [enhancement]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like to see?
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why would it help?
+  - type: input
+    id: model
+    attributes:
+      label: Light model (if this is about a new light)
+      description: Say which model you tested and which LAN commands it takes.

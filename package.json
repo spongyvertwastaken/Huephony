@@ -1,0 +1,53 @@
+{
+  "name": "huephony",
+  "private": true,
+  "version": "1.0.0",
+  "description": "A free Windows app that matches Govee room lighting to Spotify album artwork.",
+  "license": "GPL-3.0-only",
+  "homepage": "https://github.com/spongyvertwastaken/huephony",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spongyvertwastaken/huephony.git"
+  },
+  "bugs": {
+    "url": "https://github.com/spongyvertwastaken/huephony/issues"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "backend:venv": "python -m venv backend\\.venv",
+    "backend:install": "backend\\.venv\\Scripts\\python.exe -m pip install -r backend\\requirements-dev.txt",
+    "backend:dev": "backend\\.venv\\Scripts\\python.exe -m uvicorn main:app --reload --host 127.0.0.1 --port 8000 --app-dir backend",
+    "backend:build": "backend\\.venv\\Scripts\\python.exe -m PyInstaller --clean --onefile --noconsole --name huephony-backend-x86_64-pc-windows-msvc --distpath backend\\dist --workpath backend\\build --specpath backend\\build backend\\desktop_backend.py",
+    "backend:test": "backend\\.venv\\Scripts\\python.exe -m pytest backend\\tests -q -p no:cacheprovider",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run typecheck && npm run backend:test",
+    "notices": "cargo fetch --locked --manifest-path src-tauri/Cargo.toml && node scripts/generate-notices.mjs",
+    "build": "npm run typecheck && vite build",
+    "dev": "vite",
+    "desktop:dev": "tauri dev",
+    "desktop:build": "npm run notices && npm run backend:build && tauri build"
+  },
+  "dependencies": {
+    "@fontsource/montserrat": "^5.3.0",
+    "@tauri-apps/api": "^2.11.0",
+    "@tauri-apps/plugin-shell": "^2.3.5",
+    "lucide-react": "0.487.0",
+    "motion": "12.23.24",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "4.1.12",
+    "@tauri-apps/cli": "^2.5.0",
+    "@types/node": "^22.20.5",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react": "4.7.0",
+    "tailwindcss": "4.1.12",
+    "typescript": "~5.9.3",
+    "vite": "~6.4.4"
+  }
+}

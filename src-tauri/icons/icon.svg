@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <!-- Huephony app icon: one sound wave lit in the hue gradient. Source for src-tauri/icons (render to 1024px PNG, then `npx tauri icon`). -->
+  <defs>
+    <clipPath id="tile"><rect x="48" y="48" width="928" height="928" rx="212"/></clipPath>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1c1430"/>
+      <stop offset="1" stop-color="#07050c"/>
+    </linearGradient>
+    <linearGradient id="rim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".22"/>
+      <stop offset=".5" stop-color="#fff" stop-opacity=".04"/>
+      <stop offset="1" stop-color="#fff" stop-opacity=".08"/>
+    </linearGradient>
+    <linearGradient id="hue" x1="176" y1="0" x2="848" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff3d8b"/>
+      <stop offset=".3" stop-color="#ff8a3d"/>
+      <stop offset=".52" stop-color="#ffd23f"/>
+      <stop offset=".75" stop-color="#2ee6c5"/>
+      <stop offset="1" stop-color="#3d7bff"/>
+    </linearGradient>
+    <filter id="wash" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="130"/></filter>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="44"/></filter>
+    <path id="wave" d="M 176 512 C 280 512 292 296 396 296 C 500 296 524 728 628 728 C 732 728 744 512 848 512"/>
+  </defs>
+  <g clip-path="url(#tile)">
+    <rect width="1024" height="1024" fill="url(#bg)"/>
+    <use href="#wave" fill="none" stroke="url(#hue)" stroke-width="260" stroke-linecap="round" filter="url(#wash)" opacity=".3"/>
+    <use href="#wave" fill="none" stroke="url(#hue)" stroke-width="128" stroke-linecap="round" filter="url(#glow)" opacity=".85"/>
+    <use href="#wave" fill="none" stroke="url(#hue)" stroke-width="104" stroke-linecap="round"/>
+    <use href="#wave" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="16" stroke-linecap="round" transform="translate(0 -24)"/>
+  </g>
+  <rect x="49.5" y="49.5" width="925" height="925" rx="210.5" fill="none" stroke="url(#rim)" stroke-width="3"/>
+</svg>

@@ -1,0 +1,6 @@
+fastapi==0.115.6
+uvicorn[standard]==0.32.1
+python-dotenv==1.0.1
+requests==2.32.3
+Pillow==11.0.0
+pywin32>=306; sys_platform == "win32"

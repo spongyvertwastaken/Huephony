@@ -1,0 +1,70 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Huephony</title>
+      <meta name="description" content="Enhance your music experience with a dynamic display that showcases Spotify cover art while syncing smart lights to the mood of the song." />
+      <meta name="robots" content="noindex, nofollow" />
+      <style>
+        html, body { height: 100%; margin: 0; background: #09070a; }
+        body {
+          min-height: 100%;
+          overflow: hidden;
+          background:
+            radial-gradient(circle at 28% 24%, rgba(143, 63, 160, 0.38), transparent 34%),
+            radial-gradient(circle at 72% 30%, rgba(207, 90, 46, 0.34), transparent 38%),
+            linear-gradient(135deg, #09070a, #140913 48%, #0a0708);
+        }
+        #root { height: 100%; }
+        #boot {
+          position: fixed;
+          inset: 0;
+          display: grid;
+          grid-auto-flow: row;
+          align-content: center;
+          justify-items: center;
+          gap: 16px;
+          transition: opacity 0.5s ease;
+        }
+        /* Hide the splash as soon as React mounts content into #root. */
+        #root:not(:empty) + #boot {
+          opacity: 0;
+          pointer-events: none;
+        }
+        #boot .ring {
+          width: 44px;
+          height: 44px;
+          border-radius: 50%;
+          border: 3px solid rgba(255, 255, 255, 0.14);
+          border-top-color: rgba(255, 255, 255, 0.82);
+          animation: boot-spin 0.85s linear infinite;
+          filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.28));
+        }
+        #boot .label {
+          color: rgba(255, 255, 255, 0.68);
+          font-family: 'Montserrat', system-ui, sans-serif;
+          font-size: 11px;
+          font-weight: 700;
+          letter-spacing: 0.18em;
+          text-transform: uppercase;
+        }
+        @keyframes boot-spin { to { transform: rotate(360deg); } }
+      </style>
+      
+    </head>
+
+    <body>
+      
+      <div id="root"></div>
+      <div id="boot">
+        <div class="ring"></div>
+        <div class="label">Starting Huephony</div>
+      </div>
+      <script type="module" src="/src/main.tsx"></script>
+      
+    </body>
+  </html>
+  

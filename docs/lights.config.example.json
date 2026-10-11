@@ -1,0 +1,80 @@
+{
+  "devices": [
+    {
+      "name": "top 1",
+      "type": "bulb",
+      "brand": "Govee",
+      "sku": "H6008",
+      "adapter": "govee",
+      "device_id": "",
+      "ip": "",
+      "enabled": false,
+      "slot": 0
+    },
+    {
+      "name": "top 2",
+      "type": "bulb",
+      "brand": "Govee",
+      "sku": "H6008",
+      "adapter": "govee",
+      "device_id": "",
+      "ip": "",
+      "enabled": false,
+      "slot": 2
+    },
+    {
+      "name": "top 3",
+      "type": "bulb",
+      "brand": "Govee",
+      "sku": "H6008",
+      "adapter": "govee",
+      "device_id": "",
+      "ip": "",
+      "enabled": false,
+      "slot": 4
+    },
+    {
+      "name": "bottom 1",
+      "type": "bulb",
+      "brand": "Govee",
+      "sku": "H6008",
+      "adapter": "govee",
+      "device_id": "",
+      "ip": "",
+      "enabled": false,
+      "slot": 1
+    },
+    {
+      "name": "bottom 2",
+      "type": "bulb",
+      "brand": "Govee",
+      "sku": "H6008",
+      "adapter": "govee",
+      "device_id": "",
+      "ip": "",
+      "enabled": false,
+      "slot": 3
+    },
+    {
+      "name": "bottom 3",
+      "type": "bulb",
+      "brand": "Govee",
+      "sku": "H6008",
+      "adapter": "govee",
+      "device_id": "",
+      "ip": "",
+      "enabled": false,
+      "slot": 5
+    }
+  ],
+  "settings": {
+    "light_count": 6,
+    "light_stands": 3,
+    "brightness_min": 20,
+    "brightness_max": 85,
+    "default_light_adapter": "govee",
+    "update_speed_ms": 350,
+    "transition_duration_ms": 3000,
+    "lights_enabled": false
+  }
+}
