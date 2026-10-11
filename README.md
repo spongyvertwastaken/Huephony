@@ -4,6 +4,8 @@ I wanted my room lights to follow whatever I was listening to, so I built this. 
 
 It's free, Windows-only, and everything runs on your own machine. No accounts, no ads, no analytics.
 
+**Website and download: [huephony.com](https://huephony.com)**
+
 ## What you need
 
 - Windows 10 or 11, 64-bit
@@ -15,7 +17,7 @@ Pulse mode also needs Spotify to be playing through this PC's speakers or headph
 
 ## Getting it running
 
-Grab `Huephony_<version>_x64-setup.exe` from the [Releases page](https://github.com/spongyvertwastaken/huephony/releases) and run it. The installer is unsigned, so Windows SmartScreen will complain. You don't need Python or anything else installed. If there's no release yet, you can build it yourself (see below).
+Download the installer straight from [huephony.com](https://huephony.com), or grab `Huephony_<version>_x64-setup.exe` from the [Releases page](https://github.com/spongyvertwastaken/huephony/releases), and run it. The installer is unsigned, so Windows SmartScreen will complain. You don't need Python or anything else installed. If there's no release yet, you can build it yourself (see below).
 
 **Spotify**
 
